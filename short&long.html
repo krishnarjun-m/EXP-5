@@ -1,31 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>string</title>
+    </head>
+    <body>
+        <script>
+            function big_small()
+            {
+                len = str1.length
+                const arr = str1.split(' ');
+                arr.sort((a,b) => a.length - b.length);
+                len = arr.length
+                document.write("Shortest : "+ arr[0]);
+                document.write(" Longest : "+ arr[len-1]);
+            }
 
-<head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 5</title>
-
-    <script src="script.js"></script>
-
-    <link rel="shortcut icon" href="media/icon.ico" type="image/x-icon">
-</head>
-
-<body>
-
-    <fieldset>
-    
-        <legend>
-            <h1>Shortest-Longest Word!</h1>
-        </legend>
-        String: <input id="string" type="text"><br><br>         
-        <button type="submit" onclick="string()">Find</button> <br>
-        <p id="outputmin"></p>
-    
-        <p id="outputmax"></p>
-        <a href="second.html">Next question!</a>     </fieldset>
-</body>
-
+            var str1 = prompt("Enter a string : ");
+            var smallest = big_small(str1);   
+        </script>
+    </body>
 </html>
